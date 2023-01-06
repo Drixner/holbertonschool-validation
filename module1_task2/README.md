@@ -10,7 +10,7 @@
 
 ## Lifecycle
 
- - Build
- - Clean
- - Post
+ - build
+ - clean
+ - post
  - help
