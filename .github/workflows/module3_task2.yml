@@ -20,7 +20,6 @@ jobs:
           make unit-tests -C module3_task2/
           make integration-tests -C module3_task2/
           make validate -C module3_task2/
-      - run: cd module3_task2 && make build
       - uses: actions/upload-artifact@v3
         with:
           name: Archive awesome-website.zip as artifact
