@@ -17,9 +17,9 @@ package: ## Produce a zip file containing the 'dist/' folder
 lint: ## Check markdown files for any syntax mistake
 	@markdownlint README.md DEPLOY.md
 
-unit-tests: ## Run unit-tets of the project
+unit_tests: ## Run unit-tets of the project
 
-integration-tests: ## Run integration-tests of the project
+integration_tests: ## Run integration-tests of the project
 
 validate: ## Validate the project
 
