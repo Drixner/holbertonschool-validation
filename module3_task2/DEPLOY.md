@@ -1,4 +1,6 @@
-# What is in the archive and how to unarchive it?
+# FAQ
+
+## What is in the archive and how to unarchive it?
 
 - In the  `awesome-website.zip`  archive you will encounter the  `dist/`  folder
 - To unarchive it in your current directory use the command line:  `unzip awesome-website.zip`
