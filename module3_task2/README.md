@@ -14,15 +14,17 @@ for the website by following the section `Note for non-git users` at the
 
 ## Lifecycle
 
-- post: Create a new blog post
-- build: Build the website
-- clean: Clean up the dist/ directory
-- package: Produce a zip file containing the 'dist/' folder
-- lint: Check markdown files for any syntax mistake
-- unit-tests: Run unit-tests of the project
-- integration-tests: Run integration-tests of the project
-- validate: Validate the project
-- help: Show the available targets and their usage
+- **post**  : Generate the website from the markdown and configuration files in
+the directory  `dist/`.
+- **build**  : Cleanup the content of the directory  `dist/`
+- **clean**  : Create a new blog post whose filename and title come from
+the environment variables  `POST_TITLE`  and  `POST_NAME`.
+- **package**  : Create a file named awesome-website.zip
+- **lint**  : Updated to lint the files README.md and DEPLOY.md with markdownlint
+- **unit-tests**  : Create Uni-test
+- **integration-tests**  : Integration-tests (No found)
+- **validate**  : Validate (No found)
+- **help**  : Prints out the list of targets and their usage.
 
 ## Build Workflow
 
