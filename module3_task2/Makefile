@@ -1,3 +1,5 @@
+# Implement the next steps for the actual Go-Hugo website's source code
+
 build: ## Build the website
 	@hugo --source=. --destination=dist/
 
@@ -17,11 +19,11 @@ package: ## Produce a zip file containing the 'dist/' folder
 lint: ## Check markdown files for any syntax mistake
 	@markdownlint README.md DEPLOY.md
 
-unit_tests: ## Run unit-tets of the project
+unit-tests: ## Run unit-tets of the project
 
-integration_tests: ## Run integration-tests of the project
+integration-tests: ## Run integration-tests of the project
 
 validate: ## Validate the project
 
 help: ## Show the available targets and their usage
-	@grep "^[a-zA-Z\-\_0-9]*:.*##.*" $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
