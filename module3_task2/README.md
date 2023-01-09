@@ -21,7 +21,7 @@ the directory  `dist/`.
 the environment variables  `POST_TITLE`  and  `POST_NAME`.
 - **package**  : Create a file named awesome-website.zip
 - **lint**  : Updated to lint the files README.md and DEPLOY.md with markdownlint
-- **unit-tests**  : Create Uni-test
+- **unit-tests**  : Create Unit-test
 - **integration-tests**  : Integration-tests (No found)
 - **validate**  : Validate (No found)
 - **help**  : Prints out the list of targets and their usage.
