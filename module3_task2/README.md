@@ -14,15 +14,15 @@ for the website by following the section `Note for non-git users` at the
 
 ## Lifecycle
 
-- post
-- build
-- clean
-- package
-- lint
-- unit-tests
-- integration-tests
-- validate
-- help
+- post: Create a new blog post
+- build: Build the website
+- clean: Clean up the dist/ directory
+- package: Produce a zip file containing the 'dist/' folder
+- lint: Check markdown files for any syntax mistake
+- unit-tests: Run unit-tests of the project
+- integration-tests: Run integration-tests of the project
+- validate: Validate the project
+- help: Show the available targets and their usage
 
 ## Build Workflow
 
