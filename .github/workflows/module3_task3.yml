@@ -1,0 +1,39 @@
+name: module3_task3
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - '1.0.0'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  validate:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: cd module3_task3 && ./setup.sh
+
+      - run: make lint -C module3_task3/
+
+      - run: make build -C module3_task3/
+
+      - run: make package -C module3_task3/
+
+      - run: |
+          make unit-tests -C module3_task3/
+          make integration-tests -C module3_task3/
+          make validate -C module3_task3/
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Archive awesome-website.zip as artifact
+          path: module3_task3/awesome-website.zip
+
+      - uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/1.0.0')
+        with:
+          files: module3_task3/awesome-website.zip
+          body_path: module3_task3/DEPLOY.md
