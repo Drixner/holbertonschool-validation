@@ -1,4 +1,4 @@
-name: module3_task4
+name: module3_task5
 
 on:
   push:
@@ -17,30 +17,30 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: cd module3_task4 && ./setup.sh
+      - run: cd module3_task5 && ./setup.sh
 
-      - run: make lint -C module3_task4/
+      - run: make lint -C module3_task5/
 
-      - run: make build -C module3_task4/
+      - run: make build -C module3_task5/
 
-      - run: make package -C module3_task4/
+      - run: make package -C module3_task5/
 
       - run: |
-          make unit-tests -C module3_task4/
-          make integration-tests -C module3_task4/
-          make validate -C module3_task4/
+          make unit-tests -C module3_task5/
+          make integration-tests -C module3_task5/
+          make validate -C module3_task5/
 
       - uses: actions/upload-artifact@v3
         with:
           name: Archive awesome-website.zip as artifact
-          path: module3_task4/awesome-website.zip
+          path: module3_task5/awesome-website.zip
 
       - uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            module3_task4/awesome-website.zip
-            module3_task4/DEPLOY.md
+            module3_task5/awesome-website.zip
+            module3_task5/DEPLOY.md
 
       # Deploy a new site on Netlify
       - uses: nwtgck/actions-netlify@v1.2
