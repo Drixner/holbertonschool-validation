@@ -1,4 +1,4 @@
-name: module3_task3
+name: module3_task4
 
 on:
   push:
@@ -17,23 +17,23 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: cd module3_task3 && ./setup.sh
+      - run: cd module3_task4 && ./setup.sh
 
-      - run: make lint -C module3_task3/
+      - run: make lint -C module3_task4/
 
-      - run: make build -C module3_task3/
+      - run: make build -C module3_task4/
 
-      - run: make package -C module3_task3/
+      - run: make package -C module3_task4/
 
       - run: |
-          make unit-tests -C module3_task3/
-          make integration-tests -C module3_task3/
-          make validate -C module3_task3/
+          make unit-tests -C module3_task4/
+          make integration-tests -C module3_task4/
+          make validate -C module3_task4/
 
       - uses: actions/upload-artifact@v3
         with:
           name: Archive awesome-website.zip as artifact
-          path: module3_task3/awesome-website.zip
+          path: module3_task4/awesome-website.zip
 
       - uses: softprops/action-gh-release@v1
         # if: github.event.pull_request
@@ -43,4 +43,4 @@ jobs:
           files: |
             module3_task4/awesome-website.zip
             module3_task4/DEPLOY.md
-          # body_path: module3_task3/DEPLOY.md
+          # body_path: module3_task4/DEPLOY.md
