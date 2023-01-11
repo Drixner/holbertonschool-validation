@@ -4,7 +4,9 @@
 
 - GNU Make version 3.81 or 4.0 must be used
 - A Valid Go-Hugo website is provided
+
 - Use the theme
+
 [ananke](https://intranet.hbtn.io/rltoken/SKy0HBhQWAtro1AlK8FVug "ananke")
 for the website by following the section `Note for non-git users` at the
 [Step 3](https://intranet.hbtn.io/rltoken/nw0c87DBiUJyagTXw9z4Ig "Step 3")
